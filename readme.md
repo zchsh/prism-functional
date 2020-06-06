@@ -6,13 +6,13 @@ This is an unstable side project where I'm trying to use PrismJs, but as a [pure
 
 First, install `prism-functional` from `npm`:
 
-```shell
+```bash
 npm install prism-functional
 ```
 
 Import the module, import the language you need, and run the function on the code you need to highlight.
 
-```
+```js
 import prism from "prism-functional"
 import langJavascript from "prism-functional/languages/javascript
 
@@ -35,7 +35,7 @@ import lang_clike from "prism-functional/languages/clike";
 import lang_ebnf from "prism-functional/languages/ebnf";
 // go (extends "clike")
 import lang_go from "prism-functional/languages/go";
-// hcl - hashicorp configuration language
+// hcl (hashicorp configuration language)
 import lang_hcl from "prism-functional/languages/hcl";
 //  javascript (extends "clike")
 import lang_javascript from "prism-functional/languages/javascript";

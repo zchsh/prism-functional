@@ -1,6 +1,6 @@
 {
   "name": "prism-functional",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An unstable side project where I'm trying to understand PrismJS. I might even try to modify it so it fits more closely with functional programming paradigms.",
   "main": "index.js",
   "scripts": {

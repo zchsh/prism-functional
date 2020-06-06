@@ -24,7 +24,7 @@ console.log(highlightedHtml)
 
 ## Available Languages
 
-I've copy-pasta'd the following languages from [Prism's source](https://github.com/PrismJS/prism/tree/master/components). The original language files have to be modified slightly to declare and export the grammer rather than append it to the global `Prism` object. In addition, many languages use properties of the global `Prism` object, such as `Prism.languages.extend`. These had to be replaced with more pure-function-like versions.
+I've copy-pasta'd the following languages from [Prism's source](https://github.com/PrismJS/prism/tree/master/components). The original language files have to be modified slightly to declare and export the grammar rather than append it to the global `Prism` object. In addition, many languages use properties of the global `Prism` object, such as `Prism.languages.extend`. These had to be replaced with more pure-function-like versions.
 
 The following languages can be imported immediately:
 

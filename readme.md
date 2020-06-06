@@ -1,6 +1,6 @@
 # Overview
 
-This is an unstable side project where I'm trying to use PrismJs, but as a [pure function](https://en.wikipedia.org/wiki/Pure_function).
+This is currently just an unstable side project where I'm trying to use PrismJs, but as a [pure function](https://en.wikipedia.org/wiki/Pure_function).
 
 ## Usage
 

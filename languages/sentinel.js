@@ -1,9 +1,12 @@
+const extend = require("../lib/extend");
+const grammar_clike = require("./clike");
+
 /*
 To Do: actually match language spec.
 See: https://docs.hashicorp.com/sentinel/language/spec/
 */
 
-const grammar_sentinel = {
+const grammar_sentinel = extend(grammar_clike, {
   comment: [
     // Comments: https://docs.hashicorp.com/sentinel/language/spec/#comments
     {
@@ -23,6 +26,6 @@ const grammar_sentinel = {
     pattern: /(["'`])(?:\\[\s\S]|(?!\1)[^\\])*\1/,
     greedy: true,
   },
-};
+});
 
 module.exports = grammar_sentinel;

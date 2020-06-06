@@ -12,12 +12,13 @@ const grammarDict = {
   ebnf: grammar_ebnf,
   go: grammar_go,
   hcl: grammar_hcl,
-  js: grammar_javascript,
+  javascript: grammar_javascript,
   sentinel: grammar_sentinel,
   "shell-session": grammar_shell_session,
 };
 
 const grammarAliases = {
+  js: "javascript",
   shell: "bash",
 };
 
@@ -48,7 +49,8 @@ const samples = [
   },
   {
     language: "js",
-    code: `console.log("Hello world!")`,
+    code:
+      'function $initHighlight(block, cls) {\n  try {\n    if (cls.search(/\bno-highlight\b/) != -1)\n      return process(block, true, 0x0F) +\n             ` class="${cls}"`;\n  } catch (e) {\n    /* handle exception */\n  }\n  for (var i = 0 / 2; i < classes.length; i++) {\n    if (checkCondition(classes[i]) === undefined)\n      console.log("undefined");\n  }\n\n  return (\n    <div>\n      <web-component>{block}</web-component>\n    </div>\n  )\n}\n\nexport  $initHighlight;',
   },
   {
     language: "go",
@@ -62,9 +64,13 @@ const samples = [
   },
 ];
 
-samples.forEach((sample) => {
-  const { code, language } = sample;
-  const grammarKey = grammarAliases[language] || language;
-  sample.highlighted = prism(code, grammarDict[grammarKey]);
-  console.log(sample.highlighted);
-});
+samples
+  .filter((s) => {
+    return true; //s.language == "sentinel"
+  })
+  .forEach((sample) => {
+    const { code, language } = sample;
+    const grammarKey = grammarAliases[language] || language;
+    sample.highlighted = prism(code, grammarDict[grammarKey]);
+    console.log(sample.highlighted);
+  });

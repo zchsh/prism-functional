@@ -31,7 +31,7 @@ const grammar_shell_session = {
   },
   command: {
     pattern: RegExp(
-      /[$#](?:[^\\\r\n'"<]|\\.|<<str>>)+/.source.replace(
+      /[$](?:[^\\\r\n'"<]|\\.|<<str>>)+/.source.replace(
         /<<str>>/g,
         function () {
           return strings;

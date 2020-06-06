@@ -1,6 +1,6 @@
 # Overview
 
-This is an unstable side project where I'm experimenting with trying to leverage PrismJS to create a more "pure" syntax highlighting function. Something like:
+This is an unstable side project where I'm trying to use PrismJs, but as a [pure function](https://en.wikipedia.org/wiki/Pure_function).
 
 ## Usage
 
@@ -63,4 +63,4 @@ I feel more familiar with functional programming paradigms, and the more I thoug
 const highlightedHtml = prism(code, language);
 ```
 
-This led me towards trying to lazily adapt PrismJS to meet this need.
+This led me towards trying to lazily adapt PrismJS to meet this need. I've basically just tried to recreate [`Prism.highlight`](https://github.com/PrismJS/prism/blob/1e3f542be065f04bf9f9f109e92c08b1370572ad/prism.js#L327) in a more pure-function-ish way.

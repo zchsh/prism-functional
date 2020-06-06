@@ -51,7 +51,7 @@ So far, moving languages over has been a relatively straightforward and quick ta
 
 ## Plugins and hooks
 
-The proper version of PrismJS seems to have [a very robust plugin ecosystem](https://github.com/PrismJS/prism/tree/master/plugins). I have not attempted to recreate it in this "functional" version. I think it's probably possible, but I have much less experience with this kind of implementation, so I'm honestly not sure.
+The proper version of PrismJS seems to have [a very robust plugin ecosystem](https://github.com/PrismJS/prism/tree/master/plugins). I have not attempted to recreate it in this "functional" version. I think it's probably possible, but I have much less experience with this kind of implementation, so I'm honestly not sure. I also haven't yet felt an acute need to use plugins.
 
 ## Background
 

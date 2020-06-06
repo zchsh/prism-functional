@@ -62,6 +62,10 @@ const samples = [
     code:
       'import "tfplan"\n# Get an array of all resources of the given type (or an empty array).\nget_resources = func(type) {\n  if length(tfplan.module_paths else []) > 0 { # always true in the real tfplan import\n    return get_resources_all_modules(type)\n  } else { # fallback for tests\n    return get_resources_root_only(type)\n  }\n}\nget_resources_root_only = func(type) {\n  resources = []\n  named_and_counted_resources = tfplan.resources[type] else {}\n  # Get resource bodies out of nested resource maps, from:\n  # {"name": {"0": {"applied": {...}, "diff": {...} }, "1": {...}}, "name": {...}}\n  # to:\n  # [{"applied": {...}, "diff": {...}}, {"applied": {...}, "diff": {...}}, ...]\n  for named_and_counted_resources as _, instances {\n    for instances as _, body {\n      append(resources, body)\n    }\n  }\n}',
   },
+  {
+    language: "js",
+    code: 'console.log("Hello world!")',
+  },
 ];
 
 samples

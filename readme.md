@@ -18,6 +18,8 @@ import langJavascript from "prism-functional/languages/javascript
 
 const codeSnippet = 'console.log("Hello world!")'
 const highlightedHtml = prism(codeSnippet, langJavascript)
+console.log(highlightedHtml)
+// console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hello world!"</span><span class="token punctuation">)</span>
 ```
 
 ## Available Languages
